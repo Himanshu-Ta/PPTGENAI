@@ -48,7 +48,7 @@ export const generatePPT = async (selectedReports, setActiveTab) => {
     }
 
     // 2. Send the captured data to the Python backend.
-    const response = await fetch('http://localhost:5001/generate-ppt', {
+    const response = await fetch('https://75f6-49-47-218-47.ngrok-free.app/generate-ppt', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
