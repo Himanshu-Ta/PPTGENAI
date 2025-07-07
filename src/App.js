@@ -15,8 +15,9 @@ const TABS = ['Market Projections', 'Category Overview', 'Consumer Overview', 'A
 
 const reportOptions = [
     // { id: 'marketProjections', label: 'Market Projections', tab: TABS[0], elementId: 'market-projections-slide', master: 'HEADER_MASTER_Market_Projections', title: 'Market Projections' },
-    { id: 'manufacturerProfile', label: 'Manufacturer Profile', tab: TABS[1], elementId: 'chart4', master: 'HEADER_MASTER_Category_Overview', title: 'Manufacturer Profile by Price Segment – Category 1' },
     { id: 'imbPerformance', label: 'IMB Volume & Share', tab: TABS[0], elementId: 'chart2', master: 'DEFAULT_MASTER', title: 'IMB Volume & Share' },
+    { id: 'manufacturerProfile', label: 'Manufacturer Profile', tab: TABS[1], elementId: 'chart4', master: 'HEADER_MASTER_Category_Overview', title: 'Manufacturer Profile by Price Segment – Category 1' },
+    // { id: 'imbPerformance', label: 'IMB Volume & Share', tab: TABS[0], elementId: 'chart2', master: 'DEFAULT_MASTER', title: 'IMB Volume & Share' },
     { id: 'consumerTypology', label: 'Consumer Typology', tab: TABS[2], elementId: 'consumer-typology-slide', master: 'HEADER_MASTER_Consumer_Overview', title: 'Consumer Typology Distribution' },
     { id: 'monthlyAnalysis', label: 'Monthly Performance Analysis', tab: TABS[3], elementId: 'chart3', master: 'DEFAULT_MASTER', title: 'Monthly Performance Analysis' }
 ];
