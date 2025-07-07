@@ -27,7 +27,7 @@ const ComplexChart = () => {
             <YAxis yAxisId="right" orientation="right" label={{ value: 'Market Share (%)', angle: -90, position: 'insideRight' }} />
             <Tooltip />
             <Legend />
-            <Bar yAxisId="left" dataKey="sales" name="Sales Volume" fill={COLORS.grey} />
+            <Bar yAxisId="left" dataKey="sales" name="Sales Volume" fill={COLORS.Brown} />
             <Line yAxisId="left" type="monotone" dataKey="movingAvg" name="3-Month Moving Avg" stroke={COLORS.orange} strokeWidth={2} />
             <Line yAxisId="right" type="monotone" dataKey="marketShare" name="Market Share (%)" stroke={COLORS.blue} strokeWidth={2} />
           </ComposedChart>

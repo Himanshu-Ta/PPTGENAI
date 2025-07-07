@@ -1,23 +1,33 @@
-// ... (all previous data remains the same)
+const rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
 
 export const COLORS = {
-  orange: '#F58220',
-  grey: '#6E6E6E',
-  blue: '#0088CC',
-  lightGrey: '#F0F0F0',
-  darkText: '#333333',
-  lightText: '#FFFFFF',
-  // New colors for the profile chart
-  profile1: '#A9A9A9',
-  profile2: '#808080',
-  profile3: '#696969',
-  profile4: '#F58220',
-  profile5: '#A0522D',
-  // New colors for the typology table
-  indexHigh: '#2E8B57',   // Dark Green
-  indexOver: '#FFB6C1',   // Light Pink
-  indexUnder: '#FFFFFF', // White (or a very light pink if preferred)
+  // Primary UI colors
+  orange: '#FB8C00',        // Vibrant Orange
+  teal: '#26A69A',          // Medium Teal
+  peach: '#FFAB91',         // Soft Peach
+  skyBlue: '#4FC3F7',       // Sky Blue
+  lightPurple: '#CE93D8',   // Light Purple
+  PalePink: '#f9ccca',
+  Brown:rgb(171, 86, 25),
+
+  // Background + text
+  lightGrey: '#FDFDFD',     // Near-white for surfaces
+  darkText: '#212121',      // High-contrast black-ish text
+  lightText: '#FFFFFF',     // Pure white for buttons etc.
+
+  // Profile chart colors (harmonized)
+  profile1: rgb(252, 121, 46),      // Orange
+  profile2:  rgb(33, 230, 144),       // Teal
+  profile3: rgb(248, 206, 122),      // Peach
+  profile4: rgb(189, 170, 250),       // Sky Blue
+  profile5: rgb(194, 111, 208),       // Light Purple
+
+  // Typology color coding
+  indexHigh: '#388E3C',      // Green = strong performance
+  indexOver: '#E53935',      // Red = over-indexed
+  indexUnder: '#FFF176',     // Yellow = under-indexed
 };
+
 
 // ... (categoryVolumeShareData, summaryData1, etc. are unchanged)
 export const categoryVolumeShareData = [

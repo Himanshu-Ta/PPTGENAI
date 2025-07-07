@@ -63,7 +63,7 @@ const IMBCategoryVolumeShare = () => {
                                 />
                                  <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: '20px' }} />
                                 <Bar dataKey="category1" stackId="a" fill={COLORS.orange} name="Category 1" label={<TotalLabel />} />
-                                <Bar dataKey="category2" stackId="a" fill={COLORS.grey} name="Category 2" />
+                                <Bar dataKey="category2" stackId="a" fill={COLORS.Brown} name="Category 2" />
                             </BarChart>
                         </ResponsiveContainer>
                         <div className="mt-6">
