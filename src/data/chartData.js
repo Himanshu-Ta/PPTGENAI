@@ -1,31 +1,41 @@
 const rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
 
 export const COLORS = {
-  // Primary UI colors
-  orange: '#FB8C00',        // Vibrant Orange
-  teal: '#26A69A',          // Medium Teal
-  peach: '#FFAB91',         // Soft Peach
-  skyBlue: '#4FC3F7',       // Sky Blue
-  lightPurple: '#CE93D8',   // Light Purple
-  PalePink: '#f9ccca',
-  Brown:rgb(171, 86, 25),
+  // Primary UI colors
+  orange: '#FB8C00',        // Vibrant Orange
+  teal: '#26A69A',          // Medium Teal
+  peach: '#FFAB91',         // Soft Peach
+  skyBlue: '#4FC3F7',       // Sky Blue
+  lightPurple: '#CE93D8',   // Light Purple
+  PalePink: '#f9ccca',
+  Brown:rgb(171, 86, 25),
 
-  // Background + text
-  lightGrey: '#FDFDFD',     // Near-white for surfaces
-  darkText: '#212121',      // High-contrast black-ish text
-  lightText: '#FFFFFF',     // Pure white for buttons etc.
+  // Background + text
+  lightGrey: '#FDFDFD',     // Near-white for surfaces
+  darkText: '#212121',      // High-contrast black-ish text
+  lightText: '#FFFFFF',     // Pure white for buttons etc.
 
-  // Profile chart colors (harmonized)
-  profile1: rgb(252, 121, 46),      // Orange
-  profile2:  rgb(33, 230, 144),       // Teal
-  profile3: rgb(248, 206, 122),      // Peach
-  profile4: rgb(189, 170, 250),       // Sky Blue
-  profile5: rgb(194, 111, 208),       // Light Purple
+  // Profile chart colors (harmonized)
+  profile1: rgb(252, 121, 46),      // Orange
+  profile2:  rgb(33, 230, 144),       // Teal
+  profile3: rgb(248, 206, 122),      // Peach
+  profile4: rgb(189, 170, 250),       // Sky Blue
+  profile5: rgb(194, 111, 208),       // Light Purple
 
-  // Typology color coding
-  indexHigh: '#388E3C',      // Green = strong performance
-  indexOver: '#E53935',      // Red = over-indexed
-  indexUnder: '#FFF176',     // Yellow = under-indexed
+  // Typology color coding
+  indexHigh: '#388E3C',      // Green = strong performance
+  indexOver: '#E53935',      // Red = over-indexed
+  indexUnder: '#FFF176',     // Yellow = under-indexed
+
+    // Brand colors for the Price Ladder chart
+  brand1: '#d62728',     // Red
+  brand2: '#ff7f0e',     // Orange
+  brand3: '#1f77b4',     // Blue
+  brand4: '#2ca02c',     // Green
+  brand5: '#9467bd',     // Purple
+  brand6: '#8c564b',     // Brown
+  brand7: '#e377c2',     // Pink
+  other: '#7f7f7f',      // Grey
 };
 
 
@@ -82,21 +92,62 @@ export const manufacturerProfileData = [
   { name: 'SPOT', PriSeg1: 20, PriSeg2: 20, PriSeg3: 20, PriSeg4: 20, PriSeg5: 20 },
 ];
 
-// --- DATA FOR COMPLEX CHART ---
-export const monthlyPerformanceData = [
-  { month: 'Jan', sales: 120, movingAvg: 120, marketShare: 15.5 },
-  { month: 'Feb', sales: 130, movingAvg: 125, marketShare: 15.8 },
-  { month: 'Mar', sales: 150, movingAvg: 133, marketShare: 16.1 },
-  { month: 'Apr', sales: 145, movingAvg: 141, marketShare: 16.0 },
-  { month: 'May', sales: 160, movingAvg: 148, marketShare: 16.5 },
-  { month: 'Jun', sales: 155, movingAvg: 153, marketShare: 16.4 },
-  { month: 'Jul', sales: 170, movingAvg: 160, marketShare: 17.0 },
-  { month: 'Aug', sales: 180, movingAvg: 168, marketShare: 17.2 },
-  { month: 'Sep', sales: 175, movingAvg: 175, marketShare: 17.1 },
-  { month: 'Oct', sales: 190, movingAvg: 182, marketShare: 17.5 },
-  { month: 'Nov', sales: 210, movingAvg: 192, marketShare: 18.0 },
-  { month: 'Dec', sales: 200, movingAvg: 200, marketShare: 17.8 },
+
+export const priceLadderData = [
+  // Data for IMB Brand 1
+  { brand: 'IMB Brand 1', sku: 'SKU A', wap: 4.0, ms: 1.5, xPosition: 1 },
+  { brand: 'IMB Brand 1', sku: 'SKU B', wap: 3.5, ms: 2.5, xPosition: 1 },
+  { brand: 'IMB Brand 1', sku: 'SKU C', wap: 3.8, ms: 1.0, xPosition: 1 },
+
+  // Data for IMB Brand 2
+  { brand: 'IMB Brand 2', sku: 'SKU D', wap: 6.2, ms: 0.8, xPosition: 2 },
+  { brand: 'IMB Brand 2', sku: 'SKU E', wap: 5.2, ms: 1.2, xPosition: 2 },
+  { brand: 'IMB Brand 2', sku: 'Brand KS Bright', wap: 2.8, ms: 2.0, xPosition: 2, label: true },
+
+  // Data for IMB Brand 3
+  { brand: 'IMB Brand 3', sku: 'SKU F', wap: 4.5, ms: 3.0, xPosition: 3 },
+  { brand: 'IMB Brand 3', sku: 'SKU G', wap: 2.8, ms: 1.8, xPosition: 3 },
+  { brand: 'IMB Brand 3', sku: 'SKU H', wap: 3.2, ms: 2.2, xPosition: 3 },
+
+  // Data for IMB Brand 4
+  { brand: 'IMB Brand 4', sku: 'SKU I', wap: 2.5, ms: 2.5, xPosition: 4 },
+  { brand: 'IMB Brand 4', sku: 'SKU J', wap: 2.2, ms: 1.5, xPosition: 4 },
+  { brand: 'IMB Brand 4', sku: 'SKU K', wap: 1.8, ms: 3.5, xPosition: 4 },
+
+  // Data for IMB Brand 5
+  { brand: 'IMB Brand 5', sku: 'SKU L', wap: 6.4, ms: 0.9, xPosition: 5 },
+  { brand: 'IMB Brand 5', sku: 'SKU M', wap: 2.2, ms: 1.1, xPosition: 5 },
+  { brand: 'IMB Brand 5', sku: 'SKU N', wap: 1.9, ms: 0.7, xPosition: 5 },
+
+  // Data for IMB Brand 6
+  { brand: 'IMB Brand 6', sku: 'Brand KS Blue', wap: 6.0, ms: 1.0, xPosition: 6, label: true },
+  { brand: 'IMB Brand 6', sku: 'SKU O', wap: 2.0, ms: 1.4, xPosition: 6 },
+  { brand: 'IMB Brand 6', sku: 'SKU P', wap: 3.8, ms: 0.6, xPosition: 6 },
+
+  // Data for IMB Brand 7
+  { brand: 'IMB Brand 7', sku: 'SKU Q', wap: 6.2, ms: 0.5, xPosition: 7 },
+  { brand: 'IMB Brand 7', sku: 'SKU R', wap: 3.6, ms: 1.3, xPosition: 7 },
+  { brand: 'IMB Brand 7', sku: 'SKU S', wap: 2.5, ms: 2.2, xPosition: 7 },
 ];
+
+export const priceSegments = [
+    { name: 'PriSeg1 20.0%\nLC10.00 or more', y: 6.00 },
+    { name: 'PriSeg2 20.0%\nLC8.00-9.99', y: 4.50 },
+    { name: 'PriSeg3 20.0%\nLC6.00-7.99', y: 3.25 },
+    { name: 'PriSeg4 20.0%\nLC3.00-5.99', y: 2.25 },
+    { name: 'PriSeg5 20.0%\nLC2.99 or less', y: 1.00 },
+];
+
+export const brandSummaryData = [
+    { brand: 'IMB Brand 1', ms: '5.00%', skus: 5, avgMs: '1.22%' },
+    { brand: 'IMB Brand 2', ms: '5.00%', skus: 8, avgMs: '1.38%' },
+    { brand: 'IMB Brand 3', ms: '5.00%', skus: 18, avgMs: '1.12%' },
+    { brand: 'IMB Brand 4', ms: '5.00%', skus: 7, avgMs: '0.48%' },
+    { brand: 'IMB Brand 5', ms: '5.00%', skus: 4, avgMs: '0.26%' },
+    { brand: 'IMB Brand 6', ms: '5.00%', skus: 11, avgMs: '0.40%' },
+    { brand: 'IMB Brand 7', ms: '5.00%', skus: 18, avgMs: '0.40%' },
+];
+
 // --- NEW DATA FOR CONSUMER TYPOLOGY TABLE ---
 export const consumerTypologyData = [
     { category: 'Global', n: 'x', t1: 10, t2: 20, t3: 10, t4: 30, t5: 10, t6: 10, t7: 10 },

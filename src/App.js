@@ -6,7 +6,8 @@ import ArrowHeader from './components/layout/ArrowHeader';
 import LoadingOverlay from './components/layout/LoadingOverlay'; // Import the new component
 import MarketProjections from './components/MarketProjections';
 import IMBCategoryVolumeShare from './components/IMBCategoryVolumeShare';
-import ComplexChart from './components/ComplexChart';
+import PriceLadderChart from './components/ComplexChart';
+// import ConsumerAPChart from './components/IMB Consumer A&P Chart';
 import ManufacturerProfile from './components/ManufacturerProfile';
 import ConsumerTypology from './components/ConsumerTypology';
 import { generatePPT } from './utils/pptxGenerator';
@@ -17,9 +18,9 @@ const reportOptions = [
     // { id: 'marketProjections', label: 'Market Projections', tab: TABS[0], elementId: 'market-projections-slide', master: 'HEADER_MASTER_Market_Projections', title: 'Market Projections' },
     { id: 'imbPerformance', label: 'IMB Volume & Share', tab: TABS[0], elementId: 'chart2', master: 'DEFAULT_MASTER', title: 'IMB Volume & Share' },
     { id: 'manufacturerProfile', label: 'Manufacturer Profile', tab: TABS[1], elementId: 'chart4', master: 'HEADER_MASTER_Category_Overview', title: 'Manufacturer Profile by Price Segment – Category 1' },
-    // { id: 'imbPerformance', label: 'IMB Volume & Share', tab: TABS[0], elementId: 'chart2', master: 'DEFAULT_MASTER', title: 'IMB Volume & Share' },
+        // { id: 'imbPerformance', label: 'IMB Volume & Share', tab: TABS[0], elementId: 'chart2', master: 'DEFAULT_MASTER', title: 'IMB Volume & Share' },
     { id: 'consumerTypology', label: 'Consumer Typology', tab: TABS[2], elementId: 'consumer-typology-slide', master: 'HEADER_MASTER_Consumer_Overview', title: 'Consumer Typology Distribution' },
-    { id: 'monthlyAnalysis', label: 'Monthly Performance Analysis', tab: TABS[3], elementId: 'chart3', master: 'DEFAULT_MASTER', title: 'Monthly Performance Analysis' }
+    { id: 'priceladder', label: 'IMB Price Ladder by SKU', tab: TABS[3], elementId: 'chart3', master: 'DEFAULT_MASTER', title: 'IMB Price Ladder by SKU – Category 1' }
 ];
 
 function App() {
@@ -60,7 +61,7 @@ function App() {
           case TABS[2]:
               return <ConsumerTypology />;
           case TABS[3]:
-              return <ComplexChart />;
+              return <PriceLadderChart />;
           default:
               return <MarketProjections />;
       }
